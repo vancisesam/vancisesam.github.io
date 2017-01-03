@@ -67,6 +67,7 @@
 
 	    					<p>The major gameplay mechanics in RRR resemble a party racing game, like Mario Kart.  The player flys around with rocket thrusters much like Iron Man.  Items are scattered across the map, allowing the player to get a boost or attack the enemy racers.  Rings also provide a boost, but aren't required to complete the course.  Any path is a valid one, and using powerups to make shortcuts is a key strategy.</p>
 
+
 	    					<iframe width="418" height="235" style ="display:block;margin: 0 auto" src="https://www.youtube.com/embed/2mPCOFwZ5ro" frameborder="0" allowfullscreen></iframe>
 
 	    					<h3  class="text-center">Design Process</h3>
@@ -74,7 +75,12 @@
 
 	    					<p>Keeping these guidlines in mind, we developed the thruster mechanic in RRR.  It allows players to fly, controlled by the tracked controllers that come with the HTC Vive.  A thruster is attached to each controller, and a thrust is applied to the center of mass of the player based on the direction the thrusters were pointed.  All rotation of the player is locked, so players must physically turn their bodies to turn in the game.  This alone prevents most motion sickness and disorientation.</p>
 
-	    					<img src="images/games/thrusters.png" width=650 style ="display:block;margin: 0 auto">
+	    					<div class="col-md-6">
+	    						<img src="images/games/thrusters-1.png" width=98% class="img-rounded">
+	    					</div>
+	    					<div class="col-md-6">
+	    						<img src="images/games/thrusters-2.png" width=98% class="img-rounded">
+	    					</div>
 	    					<br>
 	    					<p>Experimentation was done between two thruster physics models.  The most obvious and intuitive is the isotropic model, in which a force is exerted in the direction the thruster faces.  However, in RRR I wanted to emphasize horizontal over vertical movement.  This is because going down was the slowest part of the game, and I wanted to punish players less harshly to errors in the angle in which they held the contoller.  The way I did that then, was to scale a unit vector extending from the thruster independently in the horizontal and vertical directions.  This system is much less obvious, so extensive testing was performed to ensure that there was no performance difference between the models.  You can read more about that testing in  <a href = "VANCISE_FINAL_GO_FORTH.pdf">this paper I wrote.</a>  The anisotropic model was selected, for the reasons mentioned above.
 	    					<br>
@@ -89,8 +95,12 @@
 	    					
 	    					<p>Being a racing game, a big challenge we faced was displaying race information to the player (i.e. position, lap, what item they had, etc.).  It was originally theorized that a HUD, similar to what you would see in the Iron Man movies, would do the trick.  However, objects on the HUD were hard to focus on in a quick glance, and were overall more distracting and motion-sickening than helpful.  To remedy the race information problem, I put the info at a distance, so the player only has to focus their eyes on objects of similar distances.
 	    					<br>
-	    					<img src="images/games/blizzard-laser.png" width=420 class="img-rounded">
-	    					<img src="images/games/shockwave-laser.png" width=420 class="img-rounded">
+	    					<div class="col-md-6">
+	    						<img src="images/games/blizzard-laser.png" width=100% class="img-rounded">
+	    					</div>
+	    					<div class="col-md-6">
+	    						<img src="images/games/shockwave-laser.png" width=100% class="img-rounded">
+	    					</div>
 	    					<br>
 	    					The race position was moved by labelling the other racers, so you now can infer your own position.  The reticle was changed to a laser sight that the player could turn on and off, and its appearance (color and particle effect) changed based on the item you picked up.  These solutions were by no means perfect, but large improvements over the HUD system.
 	    					</p>
@@ -114,8 +124,14 @@
 	    					<h1 class="text-center">Spectrum</h1>
 	    					<h4 class="text-center" >MIT Creating Video Games</h4>
 	    					
-	    					<img src="images/games/spectrumMenu.gif" width=420 class="img-rounded">
-	    					<img src="images/games/gameplay.png" width=420 class="img-rounded">
+	    					<div class="col-md-6">
+	    						<img src="images/games/spectrumMenu.gif" width=100% class="img-rounded">
+	    					</div>
+	    					<div class="col-md-6">
+	    						<img src="images/games/gameplay.png" width=100% class="img-rounded">
+	    					</div>
+	    					
+	    					
 	    					<p>Spectrum is a top-down, 2D shooter made in Unity.  You can move only on your team's territory. Shooting acts as both a combat and movement mechanism, as your shots paint the ground underneath them.</p>
 	    					<p>The uniqueness of Spectrum lies in its scoring system.  When you are hit, instead of dying and respawning, you are converted to the team of the player who shot you.  A round is over when all players are on the same team.  You are awarded points for how many conversions you get and how early you were on the winning team.</p>
 
@@ -170,7 +186,7 @@
 	    					<h4 class="text-center" ><a href = "beatblocks/index.html">Play Here!</a></h4>
 	    					<h5 class="text-center" >(It takes a second to load...)</h5>
 	    					<div class="col-md-6">
-		    					<img src="images/games/beatBlocks.png" width =420 class="img-rounded">
+		    					<img src="images/games/beatBlocks.png" width =100% class="img-rounded">
 		    				</div>
 		    				<div class="col-md-5 col-md-offset-1">
 		    					<p style="padding-top:30px">This is a digital recreation of my Toy Design class project, Beat Blocks.  For more of an explanation, check <a href = "projects.html#beat-blocks">here</a>.  Even when we made the toy, we had always imagined it as some sort of app.  I decided to take it further, and actually make it!  Testing at the Boston Children's Museum helped me make some key refinements to the interface, especially considering interactions, affordances, and signifiers.  <a href ="music.html#beatblocks">Listen to one of my creations with the blocks!</a><br><br></p>
@@ -183,7 +199,7 @@
 	    					<h4 class="text-center" ><a href = "tak/index.html">Play Here!</a></h4>
 	    					<h5 class="text-center" >(It takes a second to load...)</h5>
 	    					<div class="col-md-6">
-		    					<img src="images/games/tak.png" width =420 class="img-rounded">
+		    					<img src="images/games/tak.png" width =100% class="img-rounded">
 		    				</div>
 		    				<div class="col-md-5 col-md-offset-1">
 		    					<p style="padding-top:30px">Tak is a board game first described by Patrick Rothfus in <i>The Wise Man's Fear</i>, and then brought to life by Cheapass Games <a href="http://cheapass.com/tak/">here</a>. I couldn't wait to get a set of my own, and I thought it would be fun to create a digital version of the game! It's very bare on features, just good enough to play sitting with a friend next to you.  If there isn't a good mobile version of the game made by someone else soon, I plan on adding networking and publishing it to the app store.</p>
