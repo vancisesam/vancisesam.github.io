@@ -56,6 +56,59 @@
 <!-- ------------------------------------------------BEGIN CONTENT -------------------------------------------- -->
 
     				<div class="col-md-9" role="main">
+    					<div class="project"  id="rRr">
+    						<h1 class="link">LINK</h1>
+	    					<h1 class="text-center">Robot Rocket Racer</h1>
+	    					<h4 class="text-center" >MIT Advanced Game Studio</h4>
+	    					<br>
+	    					<h4 class="text-center" ><a href = "https://www.dropbox.com/s/q2fwfgoktyynn38/rRr.zip?dl=0" target="_blank">Download Here!</a></h4>
+	    					
+	    					<p>Robot Rocket Racer is a single player Virtual Reality game for the HTC Vive.  You are a new class of AI, with intelligence far beyond any robot made before you, and your creator wants you to compete in the upcoming Robot Racing World Championship!  Use your thrusters to soar through the air in training races against the obsolete robots to prepare for the upcoming races!</p>
+
+	    					<p>The major gameplay mechanics in RRR resemble a party racing game, like Mario Kart.  The player flys around with rocket thrusters much like Iron Man.  Items are scattered across the map, allowing the player to get a boost or attack the enemy racers.  Rings also provide a boost, but aren't required to complete the course.  Any path is a valid one, and using powerups to make shortcuts is a key strategy.</p>
+
+	    					<iframe width="418" height="235" style ="display:block;margin: 0 auto" src="https://www.youtube.com/embed/2mPCOFwZ5ro" frameborder="0" allowfullscreen></iframe>
+
+	    					<h3  class="text-center">Design Process</h3>
+	    					<p>RRR was made as an exploration of locomotion in VR.  For many reasons, other modes of transportation in VR are unsatisfactory.  When you strap on a VR headset, are stepping into a world with truly infinite possiblilties.  Yet so many locomotion mechanics, expecially those for roomscale VR, feel so limiting.  If VR is to truly be successful, we need locomotion mechanics which empower players to do what they couldn't in real life.  To be clear, this doesn't mean they should mimic reality, but should aim to possess some of the same key qualities that natural motion has, to prevent disorientation and sickness.  Furthermore, they should not be more restrictive than natural movement.</p>
+
+	    					<p>Keeping these guidlines in mind, we developed the thruster mechanic in RRR.  It allows players to fly, controlled by the tracked controllers that come with the HTC Vive.  A thruster is attached to each controller, and a thrust is applied to the center of mass of the player based on the direction the thrusters were pointed.  All rotation of the player is locked, so players must physically turn their bodies to turn in the game.  This alone prevents most motion sickness and disorientation.</p>
+
+	    					<img src="images/games/thrusters.png" width=650 style ="display:block;margin: 0 auto">
+	    					<br>
+	    					<p>Experimentation was done between two thruster physics models.  The most obvious and intuitive is the isotropic model, in which a force is exerted in the direction the thruster faces.  However, in RRR I wanted to emphasize horizontal over vertical movement.  This is because going down was the slowest part of the game, and I wanted to punish players less harshly to errors in the angle in which they held the contoller.  The way I did that then, was to scale a unit vector extending from the thruster independently in the horizontal and vertical directions.  This system is much less obvious, so extensive testing was performed to ensure that there was no performance difference between the models.  You can read more about that testing in  <a href = "VANCISE_FINAL_GO_FORTH.pdf">this paper I wrote.</a>  The anisotropic model was selected, for the reasons mentioned above.
+	    					<br>
+	    					<br>
+	    					I mentioned earlier that rotation was locked, so the player had to use their feet to turn.  This was at first due to motion sickness concerns.  However, I did develop a method to turn slowly by tilting your head and arms like you are banking a turn.  This was intuitive and obvious for players, and caused no motion sickness due to the slow nature of the turning.  Playtesters loved it, as it was perfect for making small adjustments that were more difficult with the feet.
+	    					<br>
+	    					<br>
+	    					As useful as it was this feature did not survive.  It was important to recognize the feature's overall impact on user experience.  Previously, I had noticed how easy it was to tangle the cord of the Vive when flying in a loop.  For that reason, we designed all of our levels so that the player wouldn't get tangled, using mostly figure 8's and S's.  As soon as we introduced the turning mechanic, players would now have the opportunity of getting tangled in the cable simply by playing the levels as we intended.  So then, it was obvious that we could only have one turning mechanic if we wanted to prevent getting tangled, so the turning mechanic was cut from the locomotion.
+	    					</p>
+
+	    					<br>
+	    					
+	    					<p>Being a racing game, a big challenge we faced was displaying race information to the player (i.e. position, lap, what item they had, etc.).  It was originally theorized that a HUD, similar to what you would see in the Iron Man movies, would do the trick.  However, objects on the HUD were hard to focus on in a quick glance, and were overall more distracting and motion-sickening than helpful.  To remedy the race information problem, I put the info at a distance, so the player only has to focus their eyes on objects of similar distances.
+	    					<br>
+	    					<img src="images/games/blizzard-laser.png" width=420 class="img-rounded">
+	    					<img src="images/games/shockwave-laser.png" width=420 class="img-rounded">
+	    					<br>
+	    					The race position was moved by labelling the other racers, so you now can infer your own position.  The reticle was changed to a laser sight that the player could turn on and off, and its appearance (color and particle effect) changed based on the item you picked up.  These solutions were by no means perfect, but large improvements over the HUD system.
+	    					</p>
+	    					<h3  class="text-center">Future Plans</h3>
+	    					<p>The future of RRR is as of now, undecided.  A subset of the team, lead by myself, intends to continue working on a VR title.  We may continue developing levels for this title, or we may start a new game, learning from the flaws of RRR, and designing gameplay more suited for VR.  Our original desire to show that VR locomotion should be empowering will be at the core of our efforts moving forward.
+	    					</p>
+
+	    					<div class="roles">
+	    						<h3 class="text-center">My Roles</h3>
+	    						<ul>
+	    							<li>Core Locomotion Mechanic</li>
+	    							<li>Combat/Race UI</li>
+	    							<li>Racing AI Programming</li>
+	    							<li>Focus and Playtesting</li>
+	    							<li>Title Music</li>  							
+	    						</ul>
+	    					</div>
+    					</div>  <!-- rRr-->
     					<div class="project"  id="spectrum">
     						<h1 class="link">LINK</h1>
 	    					<h1 class="text-center">Spectrum</h1>
@@ -80,7 +133,7 @@
 	    					To reduce the spamming of close combat, I created a long-ranged shot to punish those who got into long, button mashing combat sessions.  Unlike the normal shot, the longshot cannot be blocked, only dodged.  To balance this, a player must take time to charge the longshot before he can use it.
 	    					</p>
 	    					<iframe width="420" height="236" style="float:left" src="https://www.youtube.com/embed/GpxQBqDNmJY" frameborder="0" allowfullscreen class="img-rounded"></iframe>
-	    					<img src="images/games/scoreboard.png" style="float:right"width=420 class="img-rounded">
+	    					<iframe width="420" height="236" style="float:right" src="https://www.youtube.com/embed/YgZVxklcIzc" frameborder="0" allowfullscreen class="img-rounded"></iframe>
 	    					
 	    					<p style="clear:both"><br>In addition to new shot and dodge mechanics, we really wanted to highlight our unique scoring system to the player.  To accomplish this, we added a new menu and improved the scoreboard. The new menu gives players some agency in determining exactly how score is calculated, while also showcasing some of the reason behind different score equations.  The scoreboard highlights how points were earned, and emphasizes both how early you were on the team and number of conversions.
 	    					<br>
@@ -107,7 +160,7 @@
 	    							
 	    						</ul>
 	    					</div>
-    					</div>  <!-- project 1 -->
+    					</div>  <!-- Spectrum -->
     									
     					
     					<div class="project" id="beatblocks">
@@ -146,6 +199,9 @@
 				<div class="col-md-2" role = "complementary"><!--sidebar-->
 					<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="side-nav">
 						<ul class="nav bs-docs-sidenav">
+							<li>
+								<a href="#rRr" class="page-scroll hvr-sweep-to-right">Robot Rocet Racer</a>
+							</li>
 							<li>
 								<a href="#spectrum" class="page-scroll hvr-sweep-to-right">Spectrum</a>
 							</li>
