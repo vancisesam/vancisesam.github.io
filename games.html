@@ -76,10 +76,10 @@
 	    					<p>Keeping these guidlines in mind, we developed the thruster mechanic in RRR.  It allows players to fly, controlled by the tracked controllers that come with the HTC Vive.  A thruster is attached to each controller, and a thrust is applied to the center of mass of the player based on the direction the thrusters were pointed.  All rotation of the player is locked, so players must physically turn their bodies to turn in the game.  This alone prevents most motion sickness and disorientation.</p>
 
 	    					<div class="col-md-6">
-	    						<img src="images/games/thrusters-1.png" width=98% class="img-rounded">
+	    						<img src="images/games/thrusters-1.png" width=100% class="img-rounded">
 	    					</div>
 	    					<div class="col-md-6">
-	    						<img src="images/games/thrusters-2.png" width=98% class="img-rounded">
+	    						<img src="images/games/thrusters-2.png" width=100% class="img-rounded">
 	    					</div>
 	    					<br>
 	    					<p>Experimentation was done between two thruster physics models.  The most obvious and intuitive is the isotropic model, in which a force is exerted in the direction the thruster faces.  However, in RRR I wanted to emphasize horizontal over vertical movement.  This is because going down was the slowest part of the game, and I wanted to punish players less harshly to errors in the angle in which they held the contoller.  The way I did that then, was to scale a unit vector extending from the thruster independently in the horizontal and vertical directions.  This system is much less obvious, so extensive testing was performed to ensure that there was no performance difference between the models.  You can read more about that testing in  <a href = "VANCISE_FINAL_GO_FORTH.pdf">this paper I wrote.</a>  The anisotropic model was selected, for the reasons mentioned above.
